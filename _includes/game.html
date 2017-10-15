@@ -1,6 +1,7 @@
 <script>
 
 // global variables
+var user;
 var green_player, blue_player;
 var player_arr;
 
@@ -8,14 +9,18 @@ var player_arr;
 // main
 function startGame() {
     myGameArea.start();
-    green_player = new Player(30, 30, "green", 2,   2, 0, 0, 2);
-    blue_player  = new Player(30, 30, "blue",  2, 268, 1,-1, 1);
+    green_player = new Player(30, 30, "green", 17,  17, 0, 0, 2);
+    blue_player  = new Player(30, 30, "blue",  17, 283, 1,-1, 1);
     player_arr = [green_player, blue_player];
+    user = green_player;
 }
 
 // gameplay area
 var myGameArea = {
+    // grab canvas from html doc
     canvas : document.getElementById('game1'),
+    
+    // start canvas
     start : function() {
         this.canvas.width = 512;
         this.canvas.height = 300;
@@ -35,11 +40,11 @@ var myGameArea = {
         })
 
         // mouse
-        
-
-
-
-
+        window.addEventListener('mousemove', function(e) {
+            var rect = myGameArea.canvas.getBoundingClientRect();
+            myGameArea.mouse_x = e.clientX - rect.left;
+            myGameArea.mouse_y = e.clientY - rect.top;
+        })
 
         // touch
         // window.addEventListener('touchmove', function (e) {
@@ -47,6 +52,8 @@ var myGameArea = {
         //     myGameArea.y = e.touches[0].screenY;
         // })
     },
+
+    // clear canvas
     clear : function() {
         this.context.clearRect(0,0, this.canvas.width, this.canvas.height);
     }
@@ -56,30 +63,50 @@ var myGameArea = {
 function updateGameArea() {
     myGameArea.clear();
 
-    decode_key_press();
+    decode_user_input();
 
     // calculate new positions
     for(i=0; i<player_arr.length;i++) { player_arr[i].move(); }
+    
     // update
     for(i=0; i<player_arr.length;i++) { player_arr[i].redraw(); }
 
 }
 
-// decode player's key presses
-function decode_key_press() {
-    // reset players velocity
-    green_player.vel_x = 0;
-    green_player.vel_y = 0;
-    // decode what velocities to add
-    var sp = green_player.speed;
-    if (myGameArea.keys && myGameArea.keys[37] ) {green_player.vel_x=-sp} // left
-    if (myGameArea.keys && myGameArea.keys[38] ) {green_player.vel_y=-sp} // up
-    if (myGameArea.keys && myGameArea.keys[39] ) {green_player.vel_x= sp} // right
-    if (myGameArea.keys && myGameArea.keys[40] ) {green_player.vel_y= sp} // down
+// decodes all the types of user input
+function decode_user_input() {
+    decode_key_press();
+    decode_mouse_move();
+    // decode_touch();
 }
 
+// decode user's key presses
+function decode_key_press() {
+    // reset players velocity
+    user.vel_x = 0;
+    user.vel_y = 0;
+    // decode what velocities to add
+    var sp = user.speed;
+    if(!myGameArea.canvas.onmousemove) {
+        if ( myGameArea.keys && myGameArea.keys[37] ) {user.vel_x = -sp} // left
+        if ( myGameArea.keys && myGameArea.keys[38] ) {user.vel_y = -sp} // up
+        if ( myGameArea.keys && myGameArea.keys[39] ) {user.vel_x =  sp} // right
+        if ( myGameArea.keys && myGameArea.keys[40] ) {user.vel_y =  sp} // down
+    }
+}
 
+// decode user's mouse position
+function decode_mouse_move() {
+    if (!myGameArea.keys && myGameArea.mouse_x && myGameArea.mouse_y) {
+        user.x = myGameArea.mouse_x;
+        user.y = myGameArea.mouse_y;
+    }
+}
 
+// decode user's touch inputs
+// function decode_touch() {
+
+// }
 
 
 
@@ -105,7 +132,7 @@ function Player(width, height, color, init_x, init_y, init_vel_x, init_vel_y, in
     this.redraw = function() {
         ctx = myGameArea.context;
         ctx.fillStyle = color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.fillRect(this.x - this.width/2, this.y - this.height/2, this.width, this.height);
     }
 }
 
