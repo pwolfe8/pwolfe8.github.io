@@ -3,6 +3,9 @@
 // global variables
 var green_player, blue_player;
 
+var x_start = 0;
+var y_start = 0;
+
 // main
 function startGame() {
     myGameArea.start();
@@ -11,12 +14,16 @@ function startGame() {
 }
 
 var myGameArea = {
-    canvas : document.createElement("canvas"),
+    canvas : document.getElementById('game1'),
+    //document.createElement("canvas"),
     start : function() {
         this.canvas.width = 512;
         this.canvas.height = 300;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        //document.body.insertAfter(this.canvas, document.body.childNodes[0]);
+        //document.body.innerHTML(this.canvas);
+
+
         this.interval = setInterval(updateGameArea, 20); // updates every 20th milisecond (50times/sec)
         // listen for keyboard
         // window.addEventListener('keydown', function(e) {
@@ -41,8 +48,8 @@ function Player(width, height, color, x, y, speed_x, speed_y) {
     this.height = height;
     this.speedX = speed_x;
     this.speedY = speed_y;
-    this.x = x;
-    this.y = y;
+    this.x = x_start + x;
+    this.y = y_start + y;
 
     // moves coordinates to new position
     this.move = function() { 
@@ -73,4 +80,3 @@ function updateGameArea() {
 }
 
 </script>
-
