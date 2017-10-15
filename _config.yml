@@ -20,3 +20,6 @@ github_username:  pwolfe8
 # Build settings
 markdown: kramdown
 include: ['_pages']
+
+# Specify the port jekyll uses to serve locally
+port: 8080
