@@ -75,9 +75,9 @@ function updateGameArea() {
 
 // decodes all the types of user input
 function decode_user_input() {
-    decode_key_press();
-    decode_mouse_move();
-    // decode_touch();
+    // decode_key_press();
+    // decode_mouse_move();
+    decode_touch();
 }
 
 // decode user's key presses
@@ -104,9 +104,12 @@ function decode_mouse_move() {
 }
 
 // decode user's touch inputs
-// function decode_touch() {
-
-// }
+function decode_touch() {
+    if (myGameArea.touchX && myGameArea.touchY) {
+        user.x = myGameArea.touch_x;
+        user.y = myGameArea.touch_y;
+    }
+}
 
 
 
