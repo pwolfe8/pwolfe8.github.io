@@ -24,3 +24,5 @@ include: ['_pages']
 
 # Specify the port jekyll uses to serve locally
 port: 8080
+
+theme: jekyll-theme-cayman
