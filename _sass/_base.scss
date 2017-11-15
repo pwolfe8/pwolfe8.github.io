@@ -503,6 +503,35 @@ footer {
   }
 }
 
+.btn-outline_gradient {
+    background: -webkit-linear-gradient(to left, $head-primary, $head-secondary);
+    background: linear-gradient(to left, $head-primary, $head-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    color: -webkit-linear-gradient;
+    border-color: linear-gradient;
+    border: 2px solid;
+    &:hover, &:focus, &:active, &.active {
+      color: white;
+      background-color: $theme-primary;
+      border-color: $theme-primary;
+    }
+}
+
+#mc_embed_signup{
+    // background:rgba(255, 255, 255, 0);
+    background: -webkit-linear-gradient(to left, $head-primary, $head-secondary);
+    background: linear-gradient(to left, $head-primary, $head-secondary);
+    -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    clear:left;
+    font:14px Helvetica,Arial,sans-serif;
+    width:100%;
+}
+
+
+
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   text-transform: uppercase;

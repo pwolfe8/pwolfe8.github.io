@@ -1,5 +1,5 @@
 # Site settings
-title: Name
+title: AdaptiveLearning
 email: 
 description: An early-learning app that engages your child by adapting to their learning styles
 
@@ -11,16 +11,16 @@ url: "http://pwolfe854.com" # the base hostname & protocol for your site
 # data-ad-client: ca-pub-9204963049240271
 # google_ad_client: ca-pub-9204963049240271
 
-google_analytics: "UA-86331249-1"
-addthis_id: ra-5644da281510c62f
-disqus_account: jeky-new-age
+# google_analytics: "UA-86331249-1"
+# addthis_id: ra-5644da281510c62f
+# disqus_account: jeky-new-age
 
 # Social networks usernames (many more available: flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.) see all icon at fontawesome.io
 social:
   - title: twitter
     url: https://twitter.com/
   - title: facebook
-    url: https://facebook.com/
+    url: https://www.facebook.com/projectifytech/
 
 # Build settings
 markdown: kramdown
