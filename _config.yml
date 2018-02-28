@@ -1,10 +1,10 @@
 # Site settings
 title: ConvexMind
-email: 
+email: convexmind@gmail.com
 description: An early-learning app that engages your child by adapting to their learning styles
 
 baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
-url: "http://pwolfe854.com" # the base hostname & protocol for your site
+url: "http://convexmind.io" # the base hostname & protocol for your site
 
 #Google Ad Words Data from scripts code (using Google responsive options) and ad client
 # data-ad-slot: 2973388149
@@ -18,7 +18,7 @@ url: "http://pwolfe854.com" # the base hostname & protocol for your site
 # Social networks usernames (many more available: flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.) see all icon at fontawesome.io
 social:
   - title: twitter
-    url: https://twitter.com/Adptvlearn
+    url: https://twitter.com/ConvexMind
   - title: facebook
     url: https://www.facebook.com/projectifytech/
 
