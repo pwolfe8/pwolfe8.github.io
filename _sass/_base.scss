@@ -328,7 +328,13 @@ section {
     background-size: cover;
     -o-background-size: cover;
     background-position: center;
+    /* Create the parallax scrolling effect */
     background-image: url('../img/distracted_kid-2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // end parallax
     padding: 250px 0;
     .free_time-content {
       position: relative;
