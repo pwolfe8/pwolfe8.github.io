@@ -563,6 +563,18 @@ img {
   }
 }
 
+.img-logo {
+  height: auto;
+  width: auto;
+  max-height: 72px;
+  max-width: 250px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  // left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 body {
   webkit-tap-highlight-color: #222222;
 }
