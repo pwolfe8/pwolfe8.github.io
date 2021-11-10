@@ -4,7 +4,7 @@ email: convexmind@gmail.com
 description: An early-learning app that engages your child by adapting to their learning styles
 
 baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
-url: "http://convexmind.io" # the base hostname & protocol for your site
+url: "https://convexmind.io" # the base hostname & protocol for your site
 
 #Google Ad Words Data from scripts code (using Google responsive options) and ad client
 # data-ad-slot: 2973388149
