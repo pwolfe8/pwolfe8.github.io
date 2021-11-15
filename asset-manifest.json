@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/pwolfe8-site/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/pwolfe8-site/static/js/main.4bc265ab.chunk.js",
+    "main.js.map": "/pwolfe8-site/static/js/main.4bc265ab.chunk.js.map",
+    "runtime-main.js": "/pwolfe8-site/static/js/runtime-main.e5621307.js",
+    "runtime-main.js.map": "/pwolfe8-site/static/js/runtime-main.e5621307.js.map",
+    "static/js/2.71e1079a.chunk.js": "/pwolfe8-site/static/js/2.71e1079a.chunk.js",
+    "static/js/2.71e1079a.chunk.js.map": "/pwolfe8-site/static/js/2.71e1079a.chunk.js.map",
+    "static/js/3.8bafbee4.chunk.js": "/pwolfe8-site/static/js/3.8bafbee4.chunk.js",
+    "static/js/3.8bafbee4.chunk.js.map": "/pwolfe8-site/static/js/3.8bafbee4.chunk.js.map",
+    "index.html": "/pwolfe8-site/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/pwolfe8-site/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.71e1079a.chunk.js.LICENSE.txt": "/pwolfe8-site/static/js/2.71e1079a.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/pwolfe8-site/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e5621307.js",
+    "static/js/2.71e1079a.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.4bc265ab.chunk.js"
+  ]
+}
